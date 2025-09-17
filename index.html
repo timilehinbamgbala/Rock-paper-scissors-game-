@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" id="app">
+      <header class="app-header">
+        <h1 class="brand">Rock • Paper • Scissors</h1>
+        <div
+          id="layoutIndicator"
+          class="layout-indicator"
+          aria-live="polite"
+        ></div>
+      </header>
+
+      <section class="scoreboard" aria-label="Scoreboard">
+        <div class="score-item">
+          <div class="score-label">You</div>
+          <div id="scoreYou" class="score-value">0</div>
+        </div>
+        <div class="score-item">
+          <div class="score-label">Draws</div>
+          <div id="scoreDraw" class="score-value">0</div>
+        </div>
+        <div class="score-item">
+          <div class="score-label">Computer</div>
+          <div id="scoreComp" class="score-value">0</div>
+        </div>
+      </section>
+
+      <section class="arena" aria-label="Game arena">
+        <div
+          class="choices"
+          role="radiogroup"
+          aria-label="Choose rock, paper, or scissors"
+        >
+          <button
+            class="choice"
+            data-choice="rock"
+            aria-checked="false"
+            role="radio"
+            aria-label="Rock"
+          >
+            <img src="images/rock.svg" alt="Rock" class="choice-img" />
+            <span class="label">Rock</span>
+          </button>
+          <button
+            class="choice"
+            data-choice="paper"
+            aria-checked="false"
+            role="radio"
+            aria-label="Paper"
+          >
+            <img src="images/paper.svg" alt="Paper" class="choice-img" />
+            <span class="label">Paper</span>
+          </button>
+          <button
+            class="choice"
+            data-choice="scissors"
+            aria-checked="false"
+            role="radio"
+            aria-label="Scissors"
+          >
+            <img src="images/scissors.svg" alt="Scissors" class="choice-img" />
+            <span class="label">Scissors</span>
+          </button>
+        </div>
+
+        <div class="result-card" aria-live="polite">
+          <div id="roundSummary" class="round-summary">
+            Pick your move to start.
+          </div>
+          <div class="round-choices">
+            <div class="round-choice">
+              <div class="subheading">You</div>
+              <div id="youPick" class="pick">—</div>
+            </div>
+            <div class="round-choice">
+              <div class="subheading">Computer</div>
+              <div id="compPick" class="pick">—</div>
+            </div>
+          </div>
+          <div class="controls">
+            <button id="resetBtn" class="btn link">Reset Score</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="app-footer">
+        <small>Made by Timilehin Bamgbala</small>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
